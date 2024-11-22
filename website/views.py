@@ -2,10 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return render(request,'index.html')
+    return HttpResponse ("this test work correctly for home page")
 def about_view(request):
-    return render(request,'about.html')
-    
+    return HttpResponse ("this test work correctly for about")
 def contact_view(request):
-    return render(request,'contact.html')
-    
+    return HttpResponse ("this test work correctly for contact")
