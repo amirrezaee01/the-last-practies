@@ -1,5 +1,5 @@
 from django.contrib import admin
-from blog.models import Post
+from blog.models import *
 
 
 class PostaAdmin(admin.ModelAdmin):
@@ -10,4 +10,6 @@ class PostaAdmin(admin.ModelAdmin):
     search_fields = ['title','content']
     
 admin.site.register(Post,PostaAdmin)
+admin.site.register(Category)
+
 
