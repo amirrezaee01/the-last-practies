@@ -4551,3 +4551,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 .footer-text i {
   color: #f8b600;
 }
+.pagination .active .page-link {
+  background-color: yellow;
+  color: black;
+  border-color: yellow;
+}
