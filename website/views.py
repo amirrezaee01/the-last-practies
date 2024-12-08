@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
-from website.forms import ContactForm, NewsLetterForm  # Corrected the import
+from website.forms import ContactForm, NewsLetterForm 
+from django.contrib import messages
+
 
 def index_view(request):
     return render(request, 'website/index.html')
@@ -12,7 +14,10 @@ def contact_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('website:contact')  
+            messages.add_message(request,messages.SUCCESS,'your contact submited correctly')  
+        else:
+            messages.add_message(request,messages.ERROR,'your contact submited correctly')  
+            
     else:
         form = ContactForm()
     return render(request, 'website/contact.html', {'form': form})
