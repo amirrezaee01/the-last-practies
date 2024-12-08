@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'robots',
     'taggit',
+    'captcha',
 ]
 SITE_ID = 2
 
