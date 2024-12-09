@@ -16,7 +16,7 @@ def contact_view(request):
             form.save()
             messages.add_message(request,messages.SUCCESS,'your contact submited correctly')  
         else:
-            messages.add_message(request,messages.ERROR,'your contact submited correctly')  
+            messages.add_message(request,messages.ERROR,'your contact didnt submited correctly')  
             
     else:
         form = ContactForm()
